@@ -32,6 +32,7 @@
 html,
 body {
     height: 100%;
+    font-family: 'Open Sans', sans-serif;
     color: var(--light-dark);
 }
 
@@ -48,6 +49,10 @@ ul {
 
 p {
     margin-bottom: 2rem;
+}
+
+span {
+    font-weight: 700;
 }
 
 .nav-main-container {
@@ -91,6 +96,31 @@ p {
     pointer-events: auto;
     content: "";
     background-color: #00000000;
+}
+
+.hover-reveal-overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    height: 100%;
+    width: 100%;
+    color: white;
+    opacity: 0;
+    -webkit-transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -o-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.hover-reveal-overlay:hover {
+    opacity: 1;
+}
+
+.hover-reveal-overlay>span {
+    font-size: 3rem;
 }
 
 
@@ -299,7 +329,6 @@ p {
 }
 
 .navbar-nav {
-    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 1rem;
     margin-bottom: 0;
@@ -371,7 +400,6 @@ header .image.img-bottom {
 }
 
 header .container {
-    font-family: 'Open Sans', sans-serif;
     letter-spacing: 0.7em;
     height: inherit;
     z-index: 2;
@@ -409,10 +437,15 @@ main {
     box-shadow: 0 0 24px #1b16420a, 0 44px 74px #1b16420f;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    height: 10rem;
 }
 
 .card:hover {}
+
+.member img {
+    border-radius: 0.5rem;
+    max-width: 100%;
+    max-width: 100%;
+}
 
 
 /*--------------------------------------------------------------
@@ -428,7 +461,6 @@ main {
     width: 100%;
     background-color: var(--light-dark);
     color: #b1b1b1;
-    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 0.9rem;
 }
@@ -498,7 +530,6 @@ main {
 }
 
 #main-404 h1 {
-    font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     font-size: 8rem;
 }
