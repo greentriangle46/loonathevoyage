@@ -29,7 +29,7 @@ function onYouTubeIframeAPIReady() {
                 if (e && e.data === 1) {
                     var videoHolder = document.getElementById('home-jumbotron-box');
                     if (videoHolder && videoHolder.id) {
-                        //videoHolder.classList.remove('loading');
+                        videoHolder.classList.remove('loading');
                     }
                 } else if (e && e.data === 0) {
                     e.target.playVideo()
