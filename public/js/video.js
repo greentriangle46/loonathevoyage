@@ -18,7 +18,9 @@ function onYouTubeIframeAPIReady() {
             fs: 0, // Hide the full screen button
             autohide: 1, // Hide video controls when playing
             rel: 0,
-            enablejsapi: 1
+            enablejsapi: 1,
+            start: 107
+                // end:
         },
         events: {
             onReady: function(e) {

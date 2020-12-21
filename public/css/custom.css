@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,800');
 
 /*--------------------------------------------------------------
 # VARIABLES  
@@ -11,7 +12,7 @@
     --light-dark: #3d3d3d;
     --gray-hover: #9e9e9e;
     --heejin: #e50091;
-    --hyunjin: #fcff23;
+    --hyunjin: #ffde23;
     --haseul: #0dbe80;
     --yeojin: #ff9915;
     --vivi: #ffd2d5;
@@ -49,7 +50,8 @@ ul {
 
 p {
     margin-bottom: 2rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.6rem;
 }
 
 span {
@@ -117,6 +119,10 @@ span {
 
 .lift:hover {
     transform: translateY(-0.3rem) !important;
+}
+
+.stretched-link:visited {
+    outline: 0;
 }
 
 .hover-reveal-overlay {
@@ -398,10 +404,13 @@ nav ul li a:visited:hover {
 
 header {
     padding: 2rem 0;
+    letter-spacing: 0.7em;
 }
 
-header.group {
-    background-color: #e5e7e4;
+header .container {
+    height: inherit;
+    z-index: 2;
+    color: var(--light-dark);
 }
 
 header .image {
@@ -420,13 +429,6 @@ header .image.img-bottom {
     background-position: bottom;
 }
 
-header .container {
-    letter-spacing: 0.7em;
-    height: inherit;
-    z-index: 2;
-    color: var(--light-dark);
-}
-
 header h1 {
     font-weight: 300;
 }
@@ -434,6 +436,143 @@ header h1 {
 header p {
     margin-bottom: 0;
     font-weight: 700;
+}
+
+header.history {
+    background-color: #e5e7e4;
+}
+
+header.members {
+    background-color: #182120;
+}
+
+header.member {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    position: relative;
+}
+
+header.member::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+
+header.member h1 {
+    padding-bottom: 3rem;
+    font-weight: 800;
+    font-size: 6rem;
+}
+
+header.member span {
+    font-size: 1.5rem;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 400;
+    color: var(--gray-hover);
+}
+
+header.heejin h1 {
+    color: var(--heejin);
+}
+
+header.heejin::before {
+    background-image: url(../img/members/heejin/heejin-hero.jpg);
+}
+
+header.hyunjin h1 {
+    color: var(--hyunjin);
+}
+
+header.hyunjin::before {
+    background-image: url(../img/members/hyunjin/hyunjin-hero.jpg);
+}
+
+header.haseul h1 {
+    color: var(--haseul);
+}
+
+header.haseul::before {
+    background-image: url(../img/members/haseul/haseul-hero.jpg);
+}
+
+header.yeojin h1 {
+    color: var(--yeojin);
+}
+
+header.yeojin::before {
+    background-image: url(../img/members/yeojin/yeojin-hero.jpg);
+}
+
+header.vivi h1 {
+    color: var(--vivi);
+}
+
+header.vivi::before {
+    background-image: url(../img/members/vivi/vivi-hero.jpg);
+}
+
+header.kimlip h1 {
+    color: var(--kimlip);
+}
+
+header.kimlip::before {
+    background-image: url(../img/members/kimlip/kimlip-hero.jpg);
+}
+
+header.jinsoul h1 {
+    color: var(--jinsoul);
+}
+
+header.jinsoul::before {
+    background-image: url(../img/members/jinsoul/jinsoul-hero.jpg);
+}
+
+header.choerry h1 {
+    color: var(--choerry);
+}
+
+header.choerry::before {
+    background-image: url(../img/members/choerry/choerry-hero.jpg);
+}
+
+header.yves h1 {
+    color: var(--yves);
+}
+
+header.yves::before {
+    background-image: url(../img/members/yves/yves-hero.jpg);
+}
+
+header.chuu h1 {
+    color: var(--chuu);
+}
+
+header.chuu::before {
+    background-image: url(../img/members/chuu/chuu-hero.jpg);
+}
+
+header.gowon h1 {
+    color: var(--gowon);
+}
+
+header.gowon::before {
+    background-image: url(../img/members/gowon/gowon-hero.jpg);
+}
+
+header.olivia h1 {
+    color: var(--olivia);
+}
+
+header.olivia::before {
+    background-image: url(../img/members/olivia/olivia-hero.jpg);
 }
 
 
@@ -516,6 +655,10 @@ main {
     padding-bottom: 20px;
 }
 
+.timeline h3 {
+    padding-top: 1rem;
+}
+
 .timeline ul li:nth-child(odd):before {
     content: '';
     position: absolute;
@@ -580,10 +723,6 @@ main {
     .timeline {
         width: 100%;
         padding-bottom: 0;
-    }
-    h1 {
-        font-size: 40px;
-        text-align: center;
     }
     .timeline:before {
         left: 20px;
@@ -702,6 +841,11 @@ main {
 
 
 /*--------------------------------------------------------------
+# VENDOR CUSTOM
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
 # MEDIA QUERIES
 --------------------------------------------------------------*/
 
@@ -725,6 +869,9 @@ main {
     }
     header .image {
         height: 6rem;
+    }
+    header.member h1 {
+        font-size: 4rem;
     }
 }
 
@@ -771,6 +918,9 @@ main {
     .quick-links-header {
         margin-top: 0 !important;
         margin-bottom: 1.5rem !important;
+    }
+    header.member::before {
+        opacity: 1;
     }
 }
 
