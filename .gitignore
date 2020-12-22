@@ -1,3 +1,6 @@
+# custom files
+.working-assets/
+
 # Logs
 logs
 *.log

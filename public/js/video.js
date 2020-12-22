@@ -19,7 +19,7 @@ function onYouTubeIframeAPIReady() {
             autohide: 1, // Hide video controls when playing
             rel: 0,
             enablejsapi: 1,
-            start: 107
+            start: 108
                 // end:
         },
         events: {
