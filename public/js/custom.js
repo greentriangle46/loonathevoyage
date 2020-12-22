@@ -1,12 +1,15 @@
-(function($) {
-    $(window).scroll(function() {
-        if ($(this).scrollTop() >= 130) {
-            $('#index-nav').addClass('sticky-navbar');
-        } else {
-            $('#index-nav').removeClass('stickynavbar');
-        }
-    });
-})(jQuery);
+$(window).scroll(function() {
+    // if ($(this).scrollTop() >= $('.navbar').height()) {
+    //     $('#index-nav').addClass('sticky-navbar');
+    // } else if (!window.pageYOffset) {
+    //     $('#index-nav').removeClass('sticky-navbar');
+    // }
+    if (window.pageYOffset) {
+        $('#index-nav').addClass('sticky-navbar');
+    } else {
+        $('#index-nav').removeClass('sticky-navbar');
+    }
+});
 
 $(window).on('load', function() {
     removeLoader();

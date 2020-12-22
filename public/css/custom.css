@@ -322,9 +322,8 @@ span {
     padding-bottom: 15px;
     padding-top: 15px;
     z-index: 500;
-    -webkit-box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.05);
-    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.05);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
 }
 
 .sticky-navbar {
@@ -332,6 +331,19 @@ span {
     top: 0;
     left: 0;
     width: 100%;
+    -webkit-box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.05);
+    animation: smoothNavEase 0.5s forwards;
+}
+
+@keyframes smoothNavEase {
+    0% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .navbar-brand {
