@@ -634,6 +634,7 @@ main {
 .timeline {
     position: relative;
     /* margin: 50px auto; */
+    margin-bottom: 4rem;
     padding: 2rem 0;
     box-sizing: border-box;
 }
